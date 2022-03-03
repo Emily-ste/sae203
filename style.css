@@ -1,12 +1,12 @@
 @media screen and (min-width: 480px) {
     h1{
-        background-color: violet;
+        background-color: purple;
     }
 }
 
 @media screen and (min-width: 960px) {
     h1{
-        background-color: yellow;
+        background-color: green;
     }
 }
 
