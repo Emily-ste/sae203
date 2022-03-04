@@ -24,6 +24,7 @@ header{
     color: white;
     text-align: center;
     font-size: 3vh;
+    margin-top: 1vh;
 }
 
 .item{
@@ -53,10 +54,12 @@ header{
     visibility: visible;
 }
 
-.test{
+.divP{
     width: 300px;
     height: 300px;
 }
+
+
 
 
 

@@ -20,7 +20,7 @@ $resultat = $mabd->query($req);
     echo '<div id="main">';
         foreach ($resultat as $value) {
             echo '<div class="item">';
-            echo '<div class="test">';
+            echo '<div class="divP">';
             echo '<p class="hide data">';
             echo ucwords(strtolower($value['titre_album'])).'<br>'.
                 'Sortie : '.ucwords(strtolower($value['release_album'])).'<br>'.
