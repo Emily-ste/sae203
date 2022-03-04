@@ -20,7 +20,7 @@ foreach ($resultat as $value) {
 
 <div>
     <?php
-        foreach ($resultat as $value)
+        foreach ($resultat as $value) {
             echo '<div class="item">';
             echo '<div class="test">';
             echo '<p class="hide data">';
@@ -28,6 +28,7 @@ foreach ($resultat as $value) {
             echo '</p>';
             echo '</div>';
             echo '</div>';
+        }
     ?>
 </div>
 
