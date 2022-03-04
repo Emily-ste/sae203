@@ -22,11 +22,11 @@ $resultat = $mabd->query($req);
             echo '<div class="item">';
             echo '<div class="test">';
             echo '<p class="hide data">';
-            echo ucwords($value['titre_album']).'<br>'.
-                ucwords($value['release_album']).'<br>'.
-                ucwords($value['lenght_album']).'<br>'.
-                ucwords($value['style_album']).'<br>'.
-                ucwords($value['nombretrack_album'])."\n";
+            echo ucwords(strtolower($value['titre_album'])).'<br>'.
+                ucwords(strtolower($value['release_album'])).'<br>'.
+                ucwords(strtolower($value['lenght_album'])).'<br>'.
+                ucwords(strtolower($value['style_album'])).'<br>'.
+                ucwords(strtolower($value['nombretrack_album']))."\n";
             echo '</p>';
             echo '</div>';
             echo '</div>';
