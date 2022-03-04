@@ -20,7 +20,7 @@ $resultat = $mabd->query($req);
     echo '<div id="main">';
         foreach ($resultat as $value) {
             echo '<div class="item">';
-            echo '<img src="img/cover/'.str_replace(' ', '',$value['titre_album'].'.jpeg'.'" alt="'.$value['titre_album']).'">';
+            echo '<img class="img" src="img/cover/'.str_replace(' ', '',$value['titre_album'].'.jpeg'.'" alt="'.$value['titre_album']).'">';
             echo '<div class="divP">';
             echo '<p class="hide data">';
             echo ucwords(strtolower($value['titre_album'])).'<br>'.
