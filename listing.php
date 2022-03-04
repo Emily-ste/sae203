@@ -16,21 +16,20 @@ $resultat = $mabd->query($req);
 }
 */
 
-?>
 
-<div id="main">
-    <?php
+    echo '<div id="main">';
         foreach ($resultat as $value) {
             echo '<div class="item">';
             echo '<div class="test">';
             echo '<p class="hide data">';
-            echo $value(ucwords(['titre_album'])).'<br>'.$value(ucwords(['release_album'])).'<br>'.$value(ucwords(['lenght_album'])).'<br>'.$value(ucwords(['style_album'])).'<br>'.$value(ucwords(['nombretrack_album'])).'<br>'."\n";
+            echo $value(ucwords(['titre_album'])).'<br>'.$value(ucwords(['release_album'])).'<br>'.$value(ucwords(['lenght_album'])).'<br>'.$value(ucwords(['style_album'])).'<br>'.$value(ucwords(['nombretrack_album']))."\n";
             echo '</p>';
             echo '</div>';
             echo '</div>';
         }
+        echo '</div>';
     ?>
-</div>
+
 
 
 <!-- <div id="main">
