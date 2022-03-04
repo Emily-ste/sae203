@@ -7,12 +7,19 @@ require 'header.php';
 <link rel="stylesheet" href="https://parsleyjs.org/src/parsley.css">
 
 <body>
-    <div id="searchTile">
-        <form method="GET" action="reponse_recherche.php" data-parsley-validate>
+    <div id="tile">
+        <form method="GET" action="reponse_recherche.php" data-parsley-validate id="searchTile">
+            <div id="tile2">
             votre recherche: <br>
-            <input type="text" name="prix" data-parsley-type="number"> <br>
-            <input type="text" name="prix" data-parsley-type="number"> <br>
-                        <input type="submit" name="valider">
+            <input type="text" name="album" data-parsley-type="text" placeholder="Album" class="formInput"> <br>
+            <select class="formInput">
+                <option value="1">Tous les albums</option>
+                <option value="2">Foo Fighters</option>
+                <option value="2">The Pretty Reckless</option>
+                <option value="3">Maneskin</option>
+            </select> <br>
+            <input type="submit" name="valider" id="submit">
+            </div>
         </form>
     </div>
 </body>
