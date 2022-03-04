@@ -39,6 +39,10 @@ header{
     justify-content: center;
 }
 
+.item img{
+    width: 100%;
+}
+
 .item:hover{
     transform: scale(1.1);
     transition: ease-in-out;
