@@ -23,10 +23,10 @@ $resultat = $mabd->query($req);
             echo '<div class="test">';
             echo '<p class="hide data">';
             echo ucwords(strtolower($value['titre_album'])).'<br>'.
-                'Sortie'.ucwords(strtolower($value['release_album'])).'<br>'.
-                ucwords(strtolower($value['lenght_album'])).'Minutes'.'<br>'.
-                'Genre'.ucwords(strtolower($value['style_album'])).'<br>'.
-                ucwords(strtolower($value['nombretrack_album'])).'Pistes'."\n";
+                'Sortie : '.ucwords(strtolower($value['release_album'])).'<br>'.
+                ucwords(strtolower($value['lenght_album'])).' Minutes'.'<br>'.
+                'Genre : '.ucwords(strtolower($value['style_album'])).'<br>'.
+                ucwords(strtolower($value['nombretrack_album'])).' Pistes'."\n";
             echo '</p>';
             echo '</div>';
             echo '</div>';
