@@ -84,6 +84,15 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 120vh;
+    height: 30vh;
+    color: white;
+}
+
+#searchTile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
