@@ -4,7 +4,17 @@ require 'debut.php';
 require 'header.php';
 
 
-$mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', 'sae203', 'lasaecgenial');
+try {
+    $mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', 'sae203', 'lasaecgenial');
+} catch(Exception $e) {
+
+}
+ try {
+     $mabd = mysqli_connect('localhost', 'root', '', 'sae203', '3306');
+ }  catch(Exception $r) {
+
+ }
+
 $mabd->query('SET NAMES utf8;');
 
 $req = "SELECT * FROM albums INNER JOIN artists ON albums.id_artist = artists.id_artist";
