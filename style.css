@@ -21,9 +21,8 @@ header{
 }
 
 .data{
-    position: absolute;
     color: white;
-    /*text-align: center;*/
+    text-align: center;
     font-size: 3vh;
     margin-top: 1vh;
 }
@@ -42,6 +41,7 @@ header{
 
 .img{
     max-width: 100%;
+    position: absolute;
 }
 
 .item:hover{
