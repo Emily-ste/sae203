@@ -18,7 +18,21 @@ foreach ($resultat as $value) {
 
 ?>
 
-<div id="main">
+<div>
+    <?php
+        foreach ($resultat as $value)
+            echo '<div class="item">';
+            echo '<div class="test">';
+            echo '<p class="hide data">';
+            echo $value['titre_album'].'<br>'.$value['release_album'].'<br>'.$value['lenght_album'].'<br>'.$value['style_album'].'<br>'.$value['nombretrack_album'].'<br>'."\n";
+            echo '</p>';
+            echo '</div>';
+            echo '</div>';
+    ?>
+</div>
+
+
+<!-- <div id="main">
     <div class="item">
         <div class="test">
             <p class="hide data">
@@ -30,16 +44,8 @@ foreach ($resultat as $value) {
             </p>
         </div>
     </div>
-
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
 </div>
+->
 
 
 <?php
