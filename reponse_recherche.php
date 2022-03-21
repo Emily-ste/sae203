@@ -9,8 +9,6 @@ require 'header.php';
     $album = $_GET['album'];
     $artist = $_GET['artist'];
 
-    echo $artist, $album.'<br>';
-
     $mabd->query('SET NAMES utf8;');
     $req = "SELECT * FROM albums INNER JOIN artists ON albums.id_artist = artists.id_artist
             WHERE nom_artist = '$artist';";
