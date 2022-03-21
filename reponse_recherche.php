@@ -1,15 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+require 'debut.php';
+require 'header.php';
+?>
 
-	<title></title>
-</head>
-<body>
-	reponse
-	<?php echo $_GET['prixmin'] ?>
-	et
-	<?php echo $_GET['prixmax'] ?>
-</body>
-</html>
+    <?php
+    $mabd = connexion();
+
+    $album = $_GET['album'];
+    $artist = $_GET['artist'];
+
+    echo $artist, $album.'<br>';
+
+    $mabd->query('SET NAMES utf8;');
+    $req = "SELECT * FROM albums INNER JOIN artists ON albums.id_artist = artists.id_artist
+            WHERE nom_artist = '$artist';";
+
+        $resultat = $mabd->query($req);
+        echo '<div id="main">';
+        foreach ($resultat as $value) {
+            echo '<div class="item">';
+            echo '<img class="img" src="img/cover/'.str_replace(' ', '',$value['titre_album'].'.jpeg'.'" alt="'.$value['titre_album']).'">';
+            echo '<div class="divP">';
+            echo '<p class="hide data">';
+            echo ucwords(strtolower($value['titre_album'])).'<br>'.
+                'Sortie : '.ucwords(strtolower($value['release_album'])).'<br>'.
+                ucwords(strtolower($value['lenght_album'])).' Minutes'.'<br>'.
+                'Genre : '.ucwords(strtolower($value['style_album'])).'<br>'.
+                ucwords(strtolower($value['nombretrack_album'])).' Pistes'."\n";
+            echo '</p>';
+            echo '</div>';
+            echo '</div>';
+        }
+        echo '</div>';
+
+    ?>
+
+<?php
+require 'footer.php';
+require 'fin.php';
+?>
