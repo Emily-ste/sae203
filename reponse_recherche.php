@@ -7,7 +7,7 @@ require 'header.php';
     $mabd = connexion();
 
     $album = $_GET['album'];
-    $artist = $_GET['artist'];
+    $artist = str_replace('+', ' ',$_GET['artist']);
 
     $mabd->query('SET NAMES utf8;');
 

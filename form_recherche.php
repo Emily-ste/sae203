@@ -19,7 +19,8 @@ require 'header.php';
                 $req = "SELECT nom_artist FROM artists";
                 $resultat = $mabd->query($req);
                 foreach ($resultat as $value) {
-                    echo '<option value='.$value['nom_artist'].'>'.ucwords($value['nom_artist']).'</option>';
+                    $v = str_replace(' ', '+',$value['nom_artist']);
+                    echo '<option value='.$v.'>'.ucwords($value['nom_artist']).'</option>';
                 }
                 ?>
             </select> <br>
