@@ -11,7 +11,7 @@ require 'header.php';
         <form method="GET" action="reponse_recherche.php" data-parsley-validate id="searchTile">
             <div id="tile2">
             votre recherche: <br>
-            <input type="text" name="album" data-parsley-type="text" placeholder="Album" class="formInput"> <br>
+            <input type="text" name="album" data-parsley-type="text" placeholder="Nom de l'album" class="formInput"> <br>
             <select class="formInput" name="artist">
                 <option value="">Tous les albums</option>
                 <?php
