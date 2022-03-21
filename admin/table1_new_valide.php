@@ -4,7 +4,7 @@
     <title></title>
 </head>
 <body>
-<a href="gestion.php">retour au tableau de bord</a>
+<a href="admin.php">retour au tableau de bord</a>
 <hr>
 <h1>gestion de nos albums</h1>
 <h2>vous venez d'ajouter un article</h2>
