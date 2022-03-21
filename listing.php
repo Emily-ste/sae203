@@ -4,7 +4,7 @@ require 'debut.php';
 require 'header.php';
 
 
-try {
+/*try {
     $mabd = new PDO('mysql:host=localhost;dbname=sae203;charset=UTF8;', 'sae203', 'lasaecgenial');
 } catch(Exception $e) {
 
@@ -13,7 +13,9 @@ try {
      $mabd = mysqli_connect('localhost', 'root', '', 'sae203', '3306');
  }  catch(Exception $r) {
 
- }
+ }*/
+
+$mabd = connexion();
 
 $mabd->query('SET NAMES utf8;');
 

@@ -18,7 +18,11 @@
 
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
-    <?php session_start(); ?>
+    <?php
+    session_start();
+    require 'admin/secret.php';
+    require 'lib/lib.inc.php';
+    ?>
 
 </head>
 <body>

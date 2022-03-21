@@ -20,7 +20,7 @@
                         <a class="nav-link" href="form_recherche.php">Recherche</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="admin.php">Admin</a>
+                        <a class="nav-link" href="admin/admin.php">Admin</a>
                     </li>
                 </ul>
             </div>
