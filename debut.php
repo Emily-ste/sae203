@@ -18,6 +18,8 @@
 
     <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+
     <?php
     session_start();
     require 'lib/lib_crud.inc.php';
