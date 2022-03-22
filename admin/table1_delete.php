@@ -17,12 +17,19 @@ $mabd = connexion();
 $req = 'DELETE FROM albums
         WHERE id_album = '.$id;
 
-// cette ligne sert juste pour le debug. à supprimer quand tout marche correctement
-echo $req;
+try {
+    $resultat = $mabd->query($req);
+} catch (PDOException $e){
+    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+    die();
+}
 
-$resultat = $mabd->query($req);
-
-echo '<h2>vous venez de supprimer l\'album numéro '.$id.'</h2>';
+if ($resultat->rowCount()==1) {
+    echo '<h2>vous venez de supprimer l\'album numéro '.$id.'</h2>';
+} else {
+    echo '<p>Erreur lors de la suppression.</p>'."\n";
+    die();
+}
 ?>
 
 </body>

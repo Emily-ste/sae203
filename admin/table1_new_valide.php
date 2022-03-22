@@ -24,8 +24,19 @@ $mabd = connexion();
 $req = 'INSERT INTO albums(titre_album, release_album, lenght_album, style_album, nombretrack_album, id_artist) 
         VALUES("'.$titre.'", '.$sortie.', '.$duree.', "'.$style.'", '.$nbtrack.', '.$artist.');';
 
-echo $req;
-$resultat = $mabd->query($req);
+try {
+    $resultat = $mabd->query($req);
+} catch (PDOException $e) {
+    // s'il y a une erreur, on l'affiche
+    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+    die();
+}
+if ($resultat->rowCount() == 1) {
+    echo '<p>L\'album ' . $titre . ' a été ajouté.</p>' . "\n";
+} else {
+    echo '<p>Erreur lors de la modification.</p>' . "\n";
+    die();
+}
 
 ?>
 </tbody>

@@ -2,7 +2,7 @@
 <html>
 <head><title></title></head>
 <body>
-<a href="gestion.php">retour au tableau de bord</a>
+<a href="admin.php">retour au tableau de bord</a>
 
 <p>vous venez de modifier un album</p>
 
@@ -14,17 +14,36 @@ require 'secret.php';
 $mabd = connexion();
 
 $titre=$_GET['titre'];
-$prix=$_GET['prix'];
-$pages =$_GET['nbpages'];
-$auteur =$_GET['numauteur'];
-$num =$_GET['num'];
+$sortie=$_GET['sortie'];
+$duree=$_GET['duree'];
+$style=$_GET['style'];
+$nbtrack=$_GET['nbtrack'];
+$artist=$_GET['artist'];
 
-$req = "UPDATE bandes_dessinees SET bd_titre='".$titre."', bd_prix='".$prix."', bd_nb_pages='".$pages."',_auteur_id='".$auteur."'
-            WHERE bd_id='$num';";
+$num=$_GET['num'];
+
+$req = "UPDATE albums SET  titre_album='".$titre."', 
+                            release_album='".$sortie."', 
+                            lenght_album='".$duree."', 
+                            style_album='".$style."', 
+                            nombretrack_album='".$nbtrack."', 
+                            id_artist='".$artist."'
+        WHERE id_album='$num';";
 
 
-echo 'juste pour le debug: '. $req;
-$resultat = $mabd->query($req);
+try {
+    $resultat = $mabd->query($req);
+} catch (PDOException $e) {
+    // s'il y a une erreur, on l'affiche
+    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
+    die();
+}
+if ($resultat->rowCount() == 1) {
+    echo '<p>l\'album ' . $titre . ' a été modifiée.</p>' . "\n";
+} else {
+    echo '<p>Erreur lors de la modification.</p>' . "\n";
+    die();
+}
 
 ?>
 
