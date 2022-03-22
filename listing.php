@@ -19,6 +19,9 @@ $resultat = $mabd->query($req);
             echo '<div class="divP">';
             echo '<p class="hide data">';
             echo ucwords(strtolower($value['titre_album'])).'<br>'.
+                'Par : '.ucwords(strtolower($value['nom_artist'])).'<br>'.
+                'Nationalité : '.ucwords(strtolower($value['natio_artist'])).'<br>'.
+                'Actif depuis : '.ucwords(strtolower($value['since_artist'])).'<br>'.
                 'Sortie : '.ucwords(strtolower($value['release_album'])).'<br>'.
                 ucwords(strtolower($value['lenght_album'])).' Minutes'.'<br>'.
                 'Genre : '.ucwords(strtolower($value['style_album'])).'<br>'.

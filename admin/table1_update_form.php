@@ -2,12 +2,14 @@
 <html>
 <head>
     <title></title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <a href="admin.php">retour au tableau de bord</a>
 <hr>
 <h1>gestion de nos albums</h1>
 <p>modification d'un album</p>
+
 <?php
 $num = $_GET['num'];
 
@@ -24,8 +26,12 @@ try {
 }
 $album = $resultat->fetch();
 ?>
+
 <hr>
-<form method="GET" action="table1_update_valide.php">
+<form method="POST" action="table1_update_valide.php">
+    image : <img class="img2" src="../img/cover/<? echo str_replace(' ', '',$album['titre_album'].'.jpeg'.'" alt="'.$album['titre_album']).'">';?><br>
+    <input type="file" name="pic" /><br>
+    <hr>
     titre : <input type="text" name="titre" value="<?= $album['titre_album']; ?>"><br>
     sortie : <input type="text" name="sortie" value="<?= $album['release_album']; ?>"><br>
     durée : <input type="text" name="duree" value="<?= $album['lenght_album']; ?>"><br>
