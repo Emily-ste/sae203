@@ -2,6 +2,7 @@
 <html>
 <head>
     <title></title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <a href="../index.php">retour au site</a>
@@ -12,7 +13,7 @@
 <a href="table1_new_form.php">ajouter un album</a>
 <table border=1>
     <thead>
-    <tr><td>Id</td><td>Titre</td><td>Sortie</td><td>Durée</td><td>Style</td><td>Nombres Tracks</td><td>Supprimer</td><td>Modifier</td></tr>
+    <tr><td>Pics</td><td>Id</td><td>Titre</td><td>Sortie</td><td>Durée</td><td>Style</td><td>Nombres Tracks</td><td>Supprimer</td><td>Modifier</td></tr>
     </thead>
     <tbody>
     <?php
@@ -27,6 +28,7 @@
 
     foreach ($resultat as $value) {
         echo '<tr>' ;
+        echo '<td><img class="img2" src="../img/cover/'.str_replace(' ', '',$value['titre_album'].'.jpeg'.'" alt="'.$value['titre_album']).'"></td>';
         echo '<td>' . $value['id_album'] . '</td>';
         echo '<td>'.$value['titre_album'] . '</td>';
         echo '<td>' . $value['release_album'] . '</td>';
