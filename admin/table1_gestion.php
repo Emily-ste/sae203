@@ -25,7 +25,7 @@
     $req = "SELECT * FROM albums";
     $resultat = $mabd->query($req);
 
-
+    //on affiche en tableau toutes les valeurs de la base "Albums"
     foreach ($resultat as $value) {
         echo '<tr>' ;
         echo '<td><img class="img2" src="../img/cover/'.str_replace(' ', '',$value['titre_album'].'.jpeg'.'" alt="'.$value['titre_album']).'"></td>';

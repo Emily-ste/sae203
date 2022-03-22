@@ -16,6 +16,7 @@ $num = $_GET['num'];
 require '../lib/lib_crud.inc.php';
 $mabd = connexion();
 
+//on reccupere tt les entrée de l'album en cours de moditifcation
 $req = 'SELECT * FROM  albums WHERE id_album ='.$num;
 try {
     $resultat = $mabd->query($req);
@@ -28,6 +29,7 @@ $album = $resultat->fetch();
 ?>
 
 <hr>
+<!-- form prérempli des data en cours de moddif -->
 <form method="POST" action="table1_update_valide.php" enctype="multipart/form-data">
     image : <img class="img2" src="../img/cover/<? echo str_replace(' ', '',$album['titre_album'].'.jpeg'.'" alt="'.$album['titre_album']);?>."><br>
     <input type="file" name="pic" ><br>
@@ -41,6 +43,7 @@ $album = $resultat->fetch();
     artist :
     <select name="artist">
         <?php
+        //on affiche de maniere dynamique la liste d'artistes, tout en preselectionnant l'actuel
         $req = "SELECT * FROM artists";
         $resultat2 = $mabd->query($req);
         foreach ($resultat2 as $value){

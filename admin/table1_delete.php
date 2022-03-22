@@ -6,16 +6,18 @@
 <hr> <h1>gestion de nos albums</h1> <hr>
 
 <?php
-// recupérer dans l'url l'id de l'album à supprimer
+//get album id
 $id=$_GET['num'];
 
 require '../lib/lib_crud.inc.php';
 $mabd = connexion();
 
-// tapez ici la requete de suppression de l'album dont l'id est passé dans l'url
+//requete de supr
 $req = 'DELETE FROM albums
         WHERE id_album = '.$id;
 
+
+//on try la suppression
 try {
     $resultat = $mabd->query($req);
 } catch (PDOException $e){

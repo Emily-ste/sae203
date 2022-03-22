@@ -20,9 +20,11 @@ $artist=$_GET['artist'];
 require '../lib/lib_crud.inc.php';
 $mabd = connexion();
 
+//requette pour creer la nouvelle entree
 $req = 'INSERT INTO albums(titre_album, release_album, lenght_album, style_album, nombretrack_album, id_artist) 
         VALUES("'.$titre.'", '.$sortie.', '.$duree.', "'.$style.'", '.$nbtrack.', '.$artist.');';
 
+//on essaye de la push
 try {
     $resultat = $mabd->query($req);
 } catch (PDOException $e) {
