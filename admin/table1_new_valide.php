@@ -18,7 +18,6 @@ $nbtrack=$_GET['nbtrack'];
 $artist=$_GET['artist'];
 
 require '../lib/lib_crud.inc.php';
-require 'secret.php';
 $mabd = connexion();
 
 $req = 'INSERT INTO albums(titre_album, release_album, lenght_album, style_album, nombretrack_album, id_artist) 

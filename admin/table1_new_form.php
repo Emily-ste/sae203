@@ -19,13 +19,12 @@
         <?php
 
         require '../lib/lib_crud.inc.php';
-        require 'secret.php';
 
         $mabd = connexion();
 
         $req = "SELECT * FROM  artists";
         $resultat = $mabd->query($req);
-
+        echo '<option value="">Tous les albums</option>';
         foreach ($resultat as $value) {
             $v = str_replace(' ', '+',$value['nom_artist']);
             echo '<option value='.$value['id_artist'].'>'.ucwords($value['nom_artist']).'</option>';

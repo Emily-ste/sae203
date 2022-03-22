@@ -1,5 +1,6 @@
 <?php
 
+require 'secret.php';
 function connexion(){
 
     try {

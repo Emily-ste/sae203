@@ -12,7 +12,6 @@
 $num = $_GET['num'];
 
 require '../lib/lib_crud.inc.php';
-require 'secret.php';
 $mabd = connexion();
 
 $req = 'SELECT * FROM  albums WHERE id_album ='.$num;

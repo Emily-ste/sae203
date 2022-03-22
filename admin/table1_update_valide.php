@@ -10,7 +10,6 @@
 <?php
 
 require '../lib/lib_crud.inc.php';
-require 'secret.php';
 $mabd = connexion();
 
 $titre=$_GET['titre'];
