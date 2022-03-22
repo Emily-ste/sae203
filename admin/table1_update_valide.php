@@ -21,31 +21,34 @@ $artist=$_POST['artist'];
 
 $num=$_POST['num'];
 
-$imageType=$_FILES["pic"]["type"];
-echo $imageType;
+//var_dump($_FILES);
 
-/*if(empty($_FILES['pic']) == false){
+
+if(!empty($_FILES['pic']['name'])){
     $imageType=$_FILES["pic"]["type"];
+    echo $imageType.'<br>';
     if ( ($imageType != "image/png") &&
         ($imageType != "image/jpg") &&
         ($imageType != "image/jpeg") ) {
         echo '<p>Désolé, le type d\'image n\'est pas reconnu ! Seuls les formats PNG et JPG/JPEG sont autorisés.</p>'."\n";
         die();
     }
-}
 
-$nouvelleImage = date("Y_m_d_H_i_s")."---".$_FILES["photo"]["name"];
+    $ext = str_replace('image/', '',$imageType);
+    echo $ext;
+    $nomimg = str_replace(' ', '',$titre);
 
-if(is_uploaded_file($_FILES["photo"]["tmp_name"])) {
-    if(!move_uploaded_file($_FILES["photo"]["tmp_name"], "../images/uploads/".$nouvelleImage)) {
-        echo '<p>Problème avec la sauvegarde de l\'image, désolé...</p>'."\n";
+    if(is_uploaded_file($_FILES["pic"]["tmp_name"])) {
+        if(!move_uploaded_file($_FILES["pic"]["tmp_name"], "../img/cover/".$nomimg.'.'.$ext)) {
+            echo '<p>Problème avec la sauvegarde de l\'image, désolée...</p>'."\n";
+            die();
+        }
+    } else {
+        echo '<p>Problème : image non chargée...</p>'."\n";
         die();
     }
-} else {
-    echo '<p>Problème : image non chargée...</p>'."\n";
-    die();
-}*/
-
+}
+imagejpeg("../img/cover/".$nomimg.'.'.$ext);
 
 
 $req = "UPDATE albums SET  titre_album='".$titre."', 

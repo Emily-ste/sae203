@@ -28,9 +28,9 @@ $album = $resultat->fetch();
 ?>
 
 <hr>
-<form method="POST" action="table1_update_valide.php">
-    image : <img class="img2" src="../img/cover/<? echo str_replace(' ', '',$album['titre_album'].'.jpeg'.'" alt="'.$album['titre_album']).'">';?><br>
-    <input type="file" name="pic" /><br>
+<form method="POST" action="table1_update_valide.php" enctype="multipart/form-data">
+    image : <img class="img2" src="../img/cover/<? echo str_replace(' ', '',$album['titre_album'].'.jpeg'.'" alt="'.$album['titre_album']);?>."><br>
+    <input type="file" name="pic" ><br>
     <hr>
     titre : <input type="text" name="titre" value="<?= $album['titre_album']; ?>"><br>
     sortie : <input type="text" name="sortie" value="<?= $album['release_album']; ?>"><br>
