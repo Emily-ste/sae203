@@ -21,7 +21,7 @@
     <?php
     session_start();
     require 'admin/secret.php';
-    require 'lib/lib.inc.php';
+    require 'lib/lib_crud.inc.php';
     ?>
 
 </head>

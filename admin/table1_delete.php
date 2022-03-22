@@ -9,7 +9,7 @@
 // recupérer dans l'url l'id de l'album à supprimer
 $id=$_GET['num'];
 
-require '../lib/lib.inc.php';
+require '../lib/lib_crud.inc.php';
 require 'secret.php';
 $mabd = connexion();
 

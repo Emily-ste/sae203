@@ -17,7 +17,7 @@
     <tbody>
     <?php
 
-    require '../lib/lib.inc.php';
+    require '../lib/lib_crud.inc.php';
     require 'secret.php';
     $mabd = connexion();
 
