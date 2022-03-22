@@ -20,7 +20,7 @@ $req = 'DELETE FROM albums
 // cette ligne sert juste pour le debug. à supprimer quand tout marche correctement
 echo $req;
 
-//$resultat = $mabd->query($req);
+$resultat = $mabd->query($req);
 
 echo '<h2>vous venez de supprimer l\'album numéro '.$id.'</h2>';
 ?>
