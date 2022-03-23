@@ -33,21 +33,14 @@ function deconnexion(&$mabd){
 
 
 //supprimer entrée
-function suppression($id, $req, $mabd) {
+function suppression($req, $mabd) {
 
     //on try la suppression
     try {
         $resultat = $mabd->query($req);
+        return $resultat;
     } catch (PDOException $e){
         echo '<p>Erreur : ' . $e->getMessage() . '</p>';
-        die();
-    }
-
-    //on suppr l'album ou on affiche que cela a échoué
-    if ($resultat->rowCount()==1) {
-        echo '<h2>vous venez de supprimer l\'album numéro '.$id.'</h2>';
-    } else {
-        echo '<p>Erreur lors de la suppression.</p>'."\n";
         die();
     }
 }
@@ -78,6 +71,23 @@ function showAlbumsEntries($req, $mabd){
     }
 }
 
+//afficher tableau de toutes les entrées de la DB artist
+function showArtistsEntries($req, $mabd){
+    $resultat = $mabd->query($req);
+
+    //on affiche en tableau toutes les valeurs de la base "Albums"
+    foreach ($resultat as $value) {
+        echo '<tr>' ;
+        echo '<td>' .$value['id_artist'] . '</td>';
+        echo '<td>'.$value['nom_artist'] . '</td>';
+        echo '<td>' .$value['natio_artist'] . '</td>';
+        echo '<td>' .$value['since_artist'] . '</td>';
+        echo '<td> <a href="table2_delete.php?num='.$value['id_artist'].'" > supprimer </a> </td>';
+        echo '<td> <a href="table2_update_form.php?num='.$value['id_artist'].'" > modifier </a> </td>';
+        echo '</tr>';
+    }
+}
+
 //afficher list artists dispo
 function listArtistsNewForm($req, $mabd){
     $resultat = $mabd->query($req);
@@ -100,18 +110,13 @@ function listArtistsNewFormPreSelect($req, $mabd){
 }
 
 //push add entries to albums
-function pushAddEntries($req, $mabd, $titre){
+function pushAddEntries($req, $mabd){
     try {
         $resultat = $mabd->query($req);
+        return $resultat;
     } catch (PDOException $e) {
         // s'il y a une erreur, on l'affiche
         echo '<p>Erreur : ' . $e->getMessage() . '</p>';
-        die();
-    }
-    if ($resultat->rowCount() == 1) {
-        echo '<p>L\'album ' . $titre . ' a été ajouté.</p>' . "\n";
-    } else {
-        echo '<p>Erreur lors de la modification.</p>' . "\n";
         die();
     }
 }

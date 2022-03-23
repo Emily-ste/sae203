@@ -19,7 +19,16 @@ $req = 'DELETE FROM albums
         WHERE id_album = '.$id;
 
 //call delete function
-suppression($id, $req, $mabd);
+
+$resultat = suppression($req, $mabd);
+
+//on suppr l'album ou on affiche que cela a échoué
+if ($resultat->rowCount()==1) {
+    echo '<h2>vous venez de supprimer l\'album numéro '.$id.'</h2>';
+} else {
+    echo '<p>Erreur lors de la suppression.</p>'."\n";
+    die();
+}
 
 ?>
 

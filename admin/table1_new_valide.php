@@ -25,7 +25,14 @@ $req = 'INSERT INTO albums(titre_album, release_album, lenght_album, style_album
         VALUES("'.$titre.'", '.$sortie.', '.$duree.', "'.$style.'", '.$nbtrack.', '.$artist.');';
 
 //on essaye de la push
-pushAddEntries($req, $mabd, $titre);
+$resultat = pushAddEntries($req, $mabd);
+
+if ($resultat->rowCount() == 1) {
+    echo '<p>L\'album ' . $titre . ' a été ajouté.</p>' . "\n";
+} else {
+    echo '<p>Erreur lors de la modification.</p>' . "\n";
+    die();
+}
 
 ?>
 </tbody>
