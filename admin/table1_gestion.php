@@ -22,23 +22,11 @@
 
     $mabd = connexion();
 
+    //requete sql
     $req = "SELECT * FROM albums";
-    $resultat = $mabd->query($req);
 
-    //on affiche en tableau toutes les valeurs de la base "Albums"
-    foreach ($resultat as $value) {
-        echo '<tr>' ;
-        echo '<td><img class="img2" src="../img/cover/'.str_replace(' ', '',$value['titre_album'].'.jpeg'.'" alt="'.$value['titre_album']).'"></td>';
-        echo '<td>' . $value['id_album'] . '</td>';
-        echo '<td>'.$value['titre_album'] . '</td>';
-        echo '<td>' . $value['release_album'] . '</td>';
-        echo '<td>' . $value['lenght_album'] . '</td>';
-        echo '<td>' . $value['style_album'] . '</td>';
-        echo '<td>' . $value['nombretrack_album'] . '</td>';
-        echo '<td> <a href="table1_delete.php?num='.$value['id_album'].'" > supprimer </a> </td>';
-        echo '<td> <a href="table1_update_form.php?num='.$value['id_album'].'" > modifier </a> </td>';
-        echo '</tr>';
-    }
+    //appel fonction afficher albums page admin
+    showAlbumsEntries($req, $mabd);
     ?>
 
     </tbody>

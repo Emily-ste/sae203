@@ -7,7 +7,7 @@
 <a href="admin.php">retour au tableau de bord</a>
 <hr>
 <h1>gestion de nos albums</h1>
-<h2>vous venez d'ajouter un article</h2>
+<h2>Validation de la modification...</h2>
 <hr>
 <?php
 $titre=$_GET['titre'];
@@ -25,19 +25,7 @@ $req = 'INSERT INTO albums(titre_album, release_album, lenght_album, style_album
         VALUES("'.$titre.'", '.$sortie.', '.$duree.', "'.$style.'", '.$nbtrack.', '.$artist.');';
 
 //on essaye de la push
-try {
-    $resultat = $mabd->query($req);
-} catch (PDOException $e) {
-    // s'il y a une erreur, on l'affiche
-    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
-    die();
-}
-if ($resultat->rowCount() == 1) {
-    echo '<p>L\'album ' . $titre . ' a été ajouté.</p>' . "\n";
-} else {
-    echo '<p>Erreur lors de la modification.</p>' . "\n";
-    die();
-}
+pushAddEntries($req, $mabd, $titre);
 
 ?>
 </tbody>

@@ -11,21 +11,15 @@
 <p>modification d'un album</p>
 
 <?php
-$num = $_GET['num'];
 
 require '../lib/lib_crud.inc.php';
 $mabd = connexion();
+$id = get_id();
 
-//on reccupere tt les entrée de l'album en cours de moditifcation
-$req = 'SELECT * FROM  albums WHERE id_album ='.$num;
-try {
-    $resultat = $mabd->query($req);
-} catch (PDOException $e) {
-    // s'il y a une erreur, on l'affiche
-    echo '<p>Erreur : ' . $e->getMessage() . '</p>';
-    die();
-}
-$album = $resultat->fetch();
+//request sql get current informations
+$req = 'SELECT * FROM  albums WHERE id_album ='.$id;
+
+$album = getEntries($req, $mabd)
 ?>
 
 <hr>
@@ -45,15 +39,7 @@ $album = $resultat->fetch();
         <?php
         //on affiche de maniere dynamique la liste d'artistes, tout en preselectionnant l'actuel
         $req = "SELECT * FROM artists";
-        $resultat2 = $mabd->query($req);
-        foreach ($resultat2 as $value){
-            echo '<option value="'.$value['id_artist'].'"';
-            if ($album['id_artist']==$value['id_artist']){
-                echo 'selected="selected"';
-            }
-            echo '>'.ucwords($value['nom_artist']).'</option>'."\n";
-        }
-
+        listArtistsNewForm($req, $mabd);
         ?>
 
     </select>
