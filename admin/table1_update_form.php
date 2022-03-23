@@ -24,7 +24,7 @@ $album = getEntries($req, $mabd)
 
 <hr>
 <!-- form prérempli des data en cours de moddif -->
-<form method="POST" action="table1_update_valide.php" enctype="multipart/form-data">
+<form method="POST" action="table1_update_valide.php?num=<?= $id?>" enctype="multipart/form-data">
     image : <img class="img2" src="../img/cover/<? echo str_replace(' ', '',$album['titre_album'].'.jpeg'.'" alt="'.$album['titre_album']);?>."><br>
     <input type="file" name="pic" ><br>
     <hr>
@@ -45,7 +45,7 @@ $album = getEntries($req, $mabd)
     </select>
 
     <br>
-    ID album !!warning!! careful with editing that<input type="text" name="num"  value="<?php echo $album['id_album']; ?>">
+    <!-- ID album !!warning!! careful with editing that<input type="text" name="num"  value="<?php echo $album['id_album']; ?>"> -->
     <br>
     <input type="submit" name="">
 </form>

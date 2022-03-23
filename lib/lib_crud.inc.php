@@ -155,7 +155,7 @@ function renamePic($mabd, $id, $titre){
 }
 
 //verrifier si une image a été up
-function verrifNewUp(){
+function verrifNewUp($pic){
     return (!empty($pic));
 }
 

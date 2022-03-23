@@ -11,7 +11,7 @@
 
 require '../lib/lib_crud.inc.php';
 $mabd = connexion();
-$id=$_POST['num'];
+$id=get_id();
 
 
 ///get some variable from table1_update
@@ -33,7 +33,7 @@ $picType = $_FILES["pic"]["type"];
 $picTMPname = $_FILES['pic']['tmp_name'];
 $nomimg = str_replace(' ', '',$titre);
 
-if (verrifNewUp($pic) == false){
+if (verrifNewUp($pic) == true){
 
     //on verrif son type
     verrifType($picType);
