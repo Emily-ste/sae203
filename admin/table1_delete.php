@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head><title></title></head>
-<body>
-<a href="admin.php">retour au tableau de bord</a>
+<?php
+require 'headfoot/head.php';
+?>
+
 <hr> <h1>gestion de nos albums</h1> <hr>
 <h2>Validation de la modification...</h2>
 
 <?php
 
-require '../lib/lib_crud.inc.php';
 $mabd = connexion();
 
 //get wich id work on
@@ -30,7 +28,7 @@ if ($resultat->rowCount()==1) {
     die();
 }
 
-?>
 
-</body>
-</html>
+
+require 'headfoot/foot.php';
+?>

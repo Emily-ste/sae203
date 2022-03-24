@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<a href="admin.php">retour au tableau de bord</a>
+<?php
+require 'headfoot/head.php';
+?>
 <hr>
 <h1>gestion de nos albums</h1>
 <h2>Validation de la modification...</h2>
@@ -17,7 +13,6 @@ $style=$_GET['style'];
 $nbtrack=$_GET['nbtrack'];
 $artist=$_GET['artist'];
 
-require '../lib/lib_crud.inc.php';
 $mabd = connexion();
 
 //requette pour creer la nouvelle entree
@@ -37,5 +32,7 @@ if ($resultat->rowCount() == 1) {
 ?>
 </tbody>
 </table>
-</body>
-</html>
+
+<?php
+require 'headfoot/foot.php';
+?>

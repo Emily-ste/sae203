@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<a href="admin.php">retour au tableau de bord</a>
+<?php
+require 'headfoot/head.php';
+?>
+
 <hr>
 <h1>gestion de nos albums</h1>
 <p>ajouter ici un album</p>
@@ -22,8 +19,6 @@
 
         //bout de php pour afficher de maniere dynamique les artistes disponibles dans la DB artists
 
-        require '../lib/lib_crud.inc.php';
-
         $mabd = connexion();
 
         //requete SQL
@@ -39,8 +34,11 @@
 
 </tbody>
 </table>
-</body>
-</html>
+
+<?php
+require 'headfoot/foot.php';
+?>
+
 
 
 

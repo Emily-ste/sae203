@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<a href="admin.php">retour au tableau de bord</a>
+<?php
+require 'headfoot/head.php';
+?>
 <hr>
 <h1>gestion des artistes</h1>
 <p>ajouter ici un artiste</p>
@@ -21,8 +17,10 @@
 
 </tbody>
 </table>
-</body>
-</html>
+
+<?php
+require 'headfoot/foot.php';
+?>
 
 
 

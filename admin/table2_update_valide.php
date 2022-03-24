@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head><title></title></head>
-<body>
-<a href="admin.php">retour au tableau de bord</a>
+<?php
+require 'headfoot/head.php';
+?>
 
 <p>Validation de la modification...</p>
 
 
 <?php
 
-require '../lib/lib_crud.inc.php';
 $mabd = connexion();
 $id=$_POST['num'];
 

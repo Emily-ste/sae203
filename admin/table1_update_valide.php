@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head><title></title></head>
-<body>
-<a href="admin.php">retour au tableau de bord</a>
+<?php
+require 'headfoot/head.php';
+?>
 
 <p>Validation de la modification...</p>
 
 
 <?php
 
-require '../lib/lib_crud.inc.php';
 $mabd = connexion();
 $id=get_id();
 
@@ -66,8 +63,6 @@ requestUpdate($mabd, $req);
 
 echo '<p>l\'album ' . $titre . ' a été modifiée.</p>' . "\n";
 
+
+require 'headfoot/foot.php';
 ?>
-
-
-</body>
-</html>

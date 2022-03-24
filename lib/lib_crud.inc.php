@@ -194,7 +194,7 @@ function saveImg($nomimg, $ext, $picTMPname){
     }
 }
 
-//convertir img en png et delete l'ancienne
+//convertir img en png et delete l'ancienne (reccuperer sur stackoverflow)
 function pngToJpeg($nomimg){
     $filePath = '../img/cover/'.$nomimg.'.png';
     $filePathEdit = '../img/cover/'.$nomimg;

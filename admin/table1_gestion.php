@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-<a href="../index.php">retour au site</a>
+<?php
+require 'headfoot/head.php';
+?>
+
 <hr>
 <h1>gestion des albums</h1>
 <hr>
@@ -18,8 +14,6 @@
     <tbody>
     <?php
 
-    require '../lib/lib_crud.inc.php';
-
     $mabd = connexion();
 
     //requete sql
@@ -31,5 +25,7 @@
 
     </tbody>
 </table>
-</body>
-</html>
+
+<?php
+require 'headfoot/foot.php';
+?>

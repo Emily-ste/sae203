@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-<a href="admin.php">retour au tableau de bord</a>
+<?php
+require 'headfoot/head.php';
+?>
 <hr>
 <h1>gestion de nos albums</h1>
 <p>modification d'un album</p>
 
 <?php
 
-require '../lib/lib_crud.inc.php';
 $mabd = connexion();
 $id = get_id();
 
@@ -50,5 +44,6 @@ $album = getEntries($req, $mabd)
     <input type="submit" name="">
 </form>
 
-</body>
-</html>
+<?php
+require 'headfoot/foot.php';
+?>
