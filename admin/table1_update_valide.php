@@ -2,7 +2,7 @@
 require 'headfoot/head.php';
 ?>
 
-<p>Validation de la modification...</p>
+<h2>Validation de la modification...</h2>
 
 
 <?php

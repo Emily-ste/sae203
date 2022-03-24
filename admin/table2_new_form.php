@@ -3,17 +3,19 @@ require 'headfoot/head.php';
 ?>
 <hr>
 <h1>gestion des artistes</h1>
-<p>ajouter ici un artiste</p>
 <hr>
+<h2>ajouter ici un artiste</h2>
 
 <!-- form pour entrer les données -->
-<form method="GET" action="table2_new_valide.php">
-    nom : <input type="text" name="nom"><br>
-    nationalité : <input type="text" name="natio"><br>
-    Actif depuis : <input type="text" name="actif"><br>
-    <br><br>
-    <input type="submit" name="">
-</form>
+<div class="form">
+    <form method="GET" action="table2_new_valide.php">
+        <input type="text" placeholder="Nom" name="nom"><br>
+        <input type="text" placeholder="Nationalité" name="natio"><br>
+        <input type="number" placeholder="Actif depuis" name="actif"><br>
+        <br>
+        <input type="submit" name="">
+    </form>
+</div>
 
 </tbody>
 </table>

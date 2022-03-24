@@ -1,8 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    margin: 0 auto;
+    background-color: rgba(194, 194, 194, 0.8);
+}
+
 .img2{
     width: 50px;
     height: auto;
 }
 
 h1{
-    color: blue;
+    color: #781ec4;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 4px;
+}
+
+h2{
+    text-align: center;
+    color: black;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 20px;
+}
+
+header a{
+    color: white;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 18px;
+    transition-duration: 100ms;
+}
+
+header a:hover{
+    color: gray;
+}
+
+table{
+    width: 70%;
+}
+
+header{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    height: 100px;
+    background-color: black;
+}
+
+.menu{
+    margin: auto;
+}
+
+.menu ul{
+    display: flex;
+    flex-flow: row;
+}
+
+.menu li{
+    margin: 0 10px;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+.table a{
+    color: #4c2424;
+}
+
+.table a:hover{
+    color: #e30e0e;
+}
+
+thead{
+    color: #781ec4;
+}
+
+.ajouter{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: "Helvetica Neue", sans-serif;
+    color: white;
+    transition-duration: 100ms;
+}
+
+.ajouter:hover{
+    color: gray;
+}
+
+.ajouter a{
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    padding: 14px 0 0;
+    background-color: #64346c;
+    border-radius: 16px;
+}
+
+.ajouter a:hover{
+    box-shadow: inset 0 0 5px black;
+}
+
+p{
+    text-align: center;
+}
+
+h3{
+    font-size: 60px;
+    font-family: "Helvetica Neue", sans-serif;
+    text-align: center;
+    margin-top: 200px;
+}
+
+
+form{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+form input{
+    height: 30px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.kecece{
+    text-align: center;
+    font-size: 18px;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.buttonNew{
+    margin-bottom: 30px;
 }

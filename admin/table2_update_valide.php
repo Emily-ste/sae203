@@ -2,13 +2,13 @@
 require 'headfoot/head.php';
 ?>
 
-<p>Validation de la modification...</p>
+<h2>Validation de la modification...</h2>
 
 
 <?php
 
 $mabd = connexion();
-$id=$_POST['num'];
+$id=$_GET['num'];
 
 
 ///get some variable from table2_update
@@ -23,18 +23,12 @@ $req = "UPDATE artists SET  nom_artist='".$nom."',
                             since_artist='".$actif."'
         WHERE id_artist='$id';";
 
-echo $req;
 
 //on try d'envoyer la requete
 $resultat = requestUpdate($mabd, $req);
 
+echo '<p>L\'artist ' . $nom . ' a été modifié.</p>' . "\n";
 
-/*if ($resultat->rowCount() == 1) {
-    echo '<p>L\'artist ' . $nom . ' a été modifié.</p>' . "\n";
-} else {
-    echo '<p>Erreur lors de la modification.</p>' . "\n";
-    die();
-}*/
 
 ?>
 

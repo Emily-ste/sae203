@@ -3,35 +3,36 @@ require 'headfoot/head.php';
 ?>
 
 <hr>
-<h1>gestion de nos albums</h1>
-<p>ajouter ici un album</p>
+<h1>gestion des albums</h1>
 <hr>
+<h2>Ajouter ici un album</h2>
 
 <!-- form pour entrer les données -->
-<form method="GET" action="table1_new_valide.php">
-    titre : <input type="text" name="titre"><br>
-    sortie : <input type="text" name="sortie"><br>
-    durée : <input type="text" name="duree"><br>
-    style : <input type="text" name="style"><br>
-    nombre track : <input type="text" name="nbtrack"><br>
-    artist : <select name="artist">
-        <?php
+<div class="form">
+    <form method="GET" action="table1_new_valide.php">
+        <input type="text" placeholder="Titre" required name="titre"><br>
+        <input type="number" placeholder="Sortie" required name="sortie"><br>
+        <input type="number" placeholder="Durée (00.00)" required name="duree"><br>
+        <input type="text" placeholder="Style"required name="style"><br>
+        <input type="number" placeholder="Nombres Tracks" required name="nbtrack"><br>
+        <div class="kecece">Artist : </div><br><select name="artist">
+            <?php
 
-        //bout de php pour afficher de maniere dynamique les artistes disponibles dans la DB artists
+            //bout de php pour afficher de maniere dynamique les artistes disponibles dans la DB artists
 
-        $mabd = connexion();
+            $mabd = connexion();
 
-        //requete SQL
-        $req = "SELECT * FROM  artists";
+            //requete SQL
+            $req = "SELECT * FROM  artists";
 
-        //afficher la liste
-        listArtistsNewForm($req, $mabd);
-        ?>
-    </select>
-    <br><br>
-    <input type="submit" name="">
-</form>
-
+            //afficher la liste
+            listArtistsNewForm($req, $mabd);
+            ?>
+        </select>
+        <br><br>
+        <input type="submit" name="">
+    </form>
+</div>
 </tbody>
 </table>
 

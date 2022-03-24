@@ -2,7 +2,9 @@
 require 'headfoot/head.php';
 ?>
 
-<hr> <h1>gestion de nos albums</h1> <hr>
+<hr>
+    <h1>gestion de nos albums</h1>
+    <hr>
 <h2>Validation de la modification...</h2>
 
 <?php
