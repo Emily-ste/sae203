@@ -13,7 +13,7 @@ require 'header.php';
 
 
     if (empty($artist) AND (empty($album) == true)){
-        echo 'aucun champs renseignés';
+        echo '<p id="nochamps">aucun champs renseignés</p>';
         $req = "SELECT * FROM albums INNER JOIN artists ON albums.id_artist = artists.id_artist;";
     }
 
@@ -37,6 +37,6 @@ require 'header.php';
 
     showList($resultat);
 
-require 'footer.php';
+//require 'footer.php';
 require 'fin.php';
 ?>

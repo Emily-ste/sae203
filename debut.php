@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>jsp</title>
+    <title>Wrapped</title>
 
     <link rel="icon" href="">
     <link rel="stylesheet" href="style.css">

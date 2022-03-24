@@ -7,11 +7,13 @@ require 'header.php';
 <link rel="stylesheet" href="https://parsleyjs.org/src/parsley.css">
 
 <body>
-    <div id="tile">
+
+ <h1 id="recherche">Recherche</h1>
+    <div class="form">
         <form method="GET" action="reponse_recherche.php" data-parsley-validate id="searchTile">
             <div id="tile2">
 
-            <input type="text" name="album" data-parsley-type="text" placeholder="Nom de l'album" class="formInput"> <br>
+            <input type="text" name="album" data-parsley-type="text" placeholder="Nom de l'album" class="formInput"> <br><br>
             <select class="formInput" name="artist">
                 <option value="">Tous les artistes</option>
                 <?php
@@ -23,7 +25,7 @@ require 'header.php';
                     echo '<option value='.$v.'>'.ucwords($value['nom_artist']).'</option>';
                 }
                 ?>
-            </select> <br>
+            </select> <br> <br>
             <input type="submit" id="submit">
             </div>
         </form>
