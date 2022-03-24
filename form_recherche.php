@@ -10,10 +10,10 @@ require 'header.php';
     <div id="tile">
         <form method="GET" action="reponse_recherche.php" data-parsley-validate id="searchTile">
             <div id="tile2">
-            votre recherche: <br>
+
             <input type="text" name="album" data-parsley-type="text" placeholder="Nom de l'album" class="formInput"> <br>
             <select class="formInput" name="artist">
-                <option value="">Tous les albums</option>
+                <option value="">Tous les artistes</option>
                 <?php
                 $mabd = connexion();
                 $req = "SELECT nom_artist FROM artists";
