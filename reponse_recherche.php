@@ -6,7 +6,8 @@ require 'header.php';
     <?php
     $mabd = connexion();
 
-    $album = $_GET['album'];
+    $albumRaw = filter_var($_GET['album'], FILTER_SANITIZE_STRING);
+    $album = htmlentities($albumRaw, ENT_QUOTES);
     $artist = str_replace('+', ' ',$_GET['artist']);
 
     $mabd->query('SET NAMES utf8;');
