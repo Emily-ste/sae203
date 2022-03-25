@@ -30,7 +30,7 @@ if ($resultat->rowCount()==1) {
     die();
 }
 
-deconnexion();
+deconnexion($mabd);
 
 require 'headfoot/foot.php';
 ?>

@@ -55,7 +55,7 @@ if ($resultat->rowCount() == 1) {
     die();
 }
 
-deconnexion();
+deconnexion($mabd);
 
 ?>
 </tbody>

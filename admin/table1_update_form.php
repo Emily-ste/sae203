@@ -36,7 +36,7 @@ $album = getEntries($req, $mabd)
             $req = "SELECT * FROM artists";
             listArtistsNewForm($req, $mabd);
 
-            deconnexion();
+            deconnexion($mabd);
             ?>
 
         </select>

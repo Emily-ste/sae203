@@ -27,7 +27,7 @@ if ($resultat->rowCount() == 1) {
 }
 
 
-deconnexion();
+deconnexion($mabd);
 ?>
 </tbody>
 </table>

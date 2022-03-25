@@ -15,7 +15,7 @@ $req = 'SELECT * FROM  artists WHERE id_artist ='.$id;
 
 $artist = getEntries($req, $mabd);
 
-deconnexion();
+deconnexion($mabd);
 
 ?>
 

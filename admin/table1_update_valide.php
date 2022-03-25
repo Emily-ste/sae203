@@ -63,7 +63,7 @@ requestUpdate($mabd, $req);
 
 echo '<p>l\'album ' . $titre . ' a été modifiée.</p>' . "\n";
 
-deconnexion();
+deconnexion($mabd);
 
 require 'headfoot/foot.php';
 ?>

@@ -27,7 +27,7 @@ require 'headfoot/head.php';
         //appel fonction afficher albums page admin
         showAlbumsEntries($req, $mabd);
 
-        deconnexion();
+        deconnexion($mabd);
         ?>
 
         </tbody>
