@@ -13,9 +13,8 @@ $resultat = $mabd->query($req);
 
 showList($resultat);
 
+echo '<div class="enbas"></div>';
 
-
-
-//require 'footer.php';
+require 'footer.php';
 require 'fin.php';
 ?>

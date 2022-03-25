@@ -3,10 +3,9 @@
     require 'header.php';
 ?>
 
-<main>
-
-
-
+<main id="background">
+    <img src="img/bg.webp" alt="">
+    <div id="catalogue"><a>Catalogue</a></div>
 </main>
 
 <?php

@@ -38,6 +38,8 @@ require 'header.php';
 
     showList($resultat);
 
-//require 'footer.php';
+echo '<div class="enbas"></div>';
+
+require 'footer.php';
 require 'fin.php';
 ?>
