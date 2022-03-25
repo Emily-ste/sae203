@@ -3,6 +3,7 @@
 require 'debut.php';
 require 'header.php';
 
+echo '<div class="enhaut"></div>';
 
 $mabd = connexion();
 

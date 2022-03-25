@@ -1,9 +1,8 @@
 <?php
 require 'debut.php';
 require 'header.php';
-?>
 
-    <?php
+echo '<div class="enhaut"></div>';
     $mabd = connexion();
 
     $albumRaw = filter_var($_GET['album'], FILTER_SANITIZE_STRING);

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 @media screen and (min-width: 200px) {
     .item{
         height: 35vh;
@@ -29,9 +31,11 @@ body{
 }
 
 header{
+    position: fixed;
     width: 100%;
     background-color: black;
     box-shadow: 0px 5px 20px gray;
+    z-index: 2;
 }
 
 #main{
@@ -143,7 +147,32 @@ form select{
 
 #recherche{
     text-align: center;
-    margin-top: 50px;
+    -webkit-animation: colorchange 7s infinite;
+    margin-top: 30px;
+}
+
+@-webkit-keyframes colorchange {
+    0% {
+        color: black;
+    }
+    16.33% {
+        color: #D12229;
+    }
+    32.66% {
+        color: #F68A1E;
+    }
+    48.99% {
+        color: #FDE01A;
+    }
+    65.32% {
+        color: #007940;
+    }
+    81.65% {
+        color: #24408E;
+    }
+    100% {
+        color: #732982;
+    }
 }
 
 #nochamps{
@@ -156,18 +185,42 @@ form select{
     height: 150px;
 }
 
-#background{
+.enhaut{
+    height: 70px;
+}
 
+#background{
+    display: flex;
+    justify-content: center;
 }
 
 #background img{
+    object-fit: cover;
     width: 100%;
-    height: 100%;
 }
 
 #catalogue{
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    height: 50px;
+    position: fixed;
+    z-index: 3;
+    transition-duration: 100ms;
+}
+
+#catalogue a{
+    text-decoration: none;
+    color: white;
+}
+
+#catalogue button{
+    border :4px solid rgb(44, 44, 44);
+    background-color: rgb(30,30,30,.5);
+    color: white;
+    font-size: 40px;
+    margin-top: 300px;
+    padding: 10px 30px;
+    font-family: 'Monoton', cursive;
+}
+
+#catalogue button:hover{
+    transform: scale(1.05);
+    transition-duration: 200ms;
 }
