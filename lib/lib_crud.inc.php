@@ -200,7 +200,6 @@ function pngToJpeg($nomimg){
     $filePathEdit = '../img/cover/'.$nomimg;
     echo 'allo';
     $image = imagecreatefrompng($filePath);
-    echo $image;
     $bg = imagecreatetruecolor(imagesx($image), imagesy($image));
     imagefill($bg, 0, 0, imagecolorallocate($bg, 255, 255, 255));
     imagealphablending($bg, TRUE);
