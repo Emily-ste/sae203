@@ -198,7 +198,7 @@ function saveImg($nomimg, $ext, $picTMPname){
 function pngToJpeg($nomimg){
     $filePath = '../img/cover/'.$nomimg.'.png';
     $filePathEdit = '../img/cover/'.$nomimg;
-    echo 'allo';
+
     $image = imagecreatefrompng($filePath);
     $bg = imagecreatetruecolor(imagesx($image), imagesy($image));
     imagefill($bg, 0, 0, imagecolorallocate($bg, 255, 255, 255));
