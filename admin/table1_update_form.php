@@ -35,6 +35,8 @@ $album = getEntries($req, $mabd)
             //on affiche de maniere dynamique la liste d'artistes, tout en preselectionnant l'actuel
             $req = "SELECT * FROM artists";
             listArtistsNewForm($req, $mabd);
+
+            deconnexion();
             ?>
 
         </select>

@@ -28,6 +28,7 @@ require 'headfoot/head.php';
 
             //afficher la liste
             listArtistsNewForm($req, $mabd);
+            deconnexion();
             ?>
         </select>
         <br><br>

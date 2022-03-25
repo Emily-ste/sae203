@@ -55,6 +55,8 @@ if ($resultat->rowCount() == 1) {
     die();
 }
 
+deconnexion();
+
 ?>
 </tbody>
 </table>

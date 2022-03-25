@@ -30,6 +30,8 @@ $resultat = requestUpdate($mabd, $req);
 echo '<p>L\'artist ' . $nom . ' a été modifié.</p>' . "\n";
 
 
+deconnexion();
+
 ?>
 
 

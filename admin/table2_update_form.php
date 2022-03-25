@@ -13,7 +13,10 @@ $id = get_id();
 //request sql get current informations
 $req = 'SELECT * FROM  artists WHERE id_artist ='.$id;
 
-$artist = getEntries($req, $mabd)
+$artist = getEntries($req, $mabd);
+
+deconnexion();
+
 ?>
 
 <hr>

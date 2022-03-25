@@ -27,6 +27,6 @@ if ($resultat->rowCount()==1) {
     die();
 }
 
-
+deconnexion();
 require 'headfoot/foot.php';
 ?>
