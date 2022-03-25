@@ -9,10 +9,11 @@ require 'headfoot/head.php';
 
 <!-- form pour entrer les données -->
 <div class="form">
-    <form method="GET" action="table1_new_valide.php">
+    <form method="POST" action="table1_new_valide.php" enctype="multipart/form-data">
+        <input type="file" name="pic" ><br>
         <input type="text" placeholder="Titre" required name="titre"><br>
         <input type="number" placeholder="Sortie" required name="sortie"><br>
-        <input type="number" placeholder="Durée (00.00)" required name="duree"><br>
+        <input type="number" step="any" placeholder="Durée (00.00)" required name="duree"><br>
         <input type="text" placeholder="Style"required name="style"><br>
         <input type="number" placeholder="Nombres Tracks" required name="nbtrack"><br>
         <div class="kecece">Artist : </div><br><select name="artist">
