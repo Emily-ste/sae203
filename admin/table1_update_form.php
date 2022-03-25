@@ -20,7 +20,7 @@ $album = getEntries($req, $mabd)
 <!-- form prérempli des data en cours de moddif -->
 <div class="form">
     <form method="POST" action="table1_update_valide.php?num=<?= $id?>" enctype="multipart/form-data">
-        <img class="img2" src="../img/cover/<? echo str_replace(' ', '',$album['titre_album'].'.jpeg'.'" alt="'.$album['titre_album']);?>."><br>
+        <img class="img2" src="../img/cover/<?php echo str_replace(' ', '',$album['titre_album'].'.jpeg'.'" alt="'.$album['titre_album']);?>."><br>
         <input type="file" name="pic" ><br>
         <hr>
         <div class="kecece">titre : </div><input type="text" name="titre" value="<?= $album['titre_album']; ?>"><br>

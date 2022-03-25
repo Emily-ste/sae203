@@ -10,7 +10,7 @@ require 'headfoot/head.php';
 <!-- form pour entrer les données -->
 <div class="form">
     <form method="POST" action="table1_new_valide.php" enctype="multipart/form-data">
-        <input type="file" name="pic" ><br>
+        <input type="file" required name="pic" ><br>
         <input type="text" placeholder="Titre" required name="titre"><br>
         <input type="number" placeholder="Sortie" required name="sortie"><br>
         <input type="number" step="any" placeholder="Durée (00.00)" required name="duree"><br>
