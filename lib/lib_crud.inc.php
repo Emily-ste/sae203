@@ -201,6 +201,7 @@ function pngToJpeg($nomimg){
 
     $image = imagecreatefrompng($filePath);
     $bg = imagecreatetruecolor(imagesx($image), imagesy($image));
+    echo 'allo';
     imagefill($bg, 0, 0, imagecolorallocate($bg, 255, 255, 255));
     imagealphablending($bg, TRUE);
     imagecopy($bg, $image, 0, 0, 0, 0, imagesx($image), imagesy($image));

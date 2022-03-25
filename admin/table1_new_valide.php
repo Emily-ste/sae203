@@ -34,7 +34,6 @@ if (verrifNewUp($pic) == true){
     saveImg($nomimg, $ext, $picTMPname);
 
 
-    echo 'allo';
     //on regarde si l'image est en png, si oui on l'edit en jpeg
     if($ext == "png"){
         pngToJpeg($nomimg);
