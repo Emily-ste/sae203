@@ -23,7 +23,6 @@ body{
 }
 
 header{
-    position: fixed;
     width: 100%;
     background-color: black;
     box-shadow: 0px 5px 20px gray;
@@ -39,6 +38,7 @@ header{
     color: white;
     text-align: center;
     font-size: 1em;
+    margin-top: 2em;
 }
 
 .item{
