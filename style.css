@@ -2,30 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
-@media screen and (min-width: 200px) {
-    .item{
-        height: 35vh;
-        width: 35vh;
-    }
-
-    .data{
-        margin-top: 3em;
-        font-size: 1em;
-    }
-}
-
-@media screen and (min-width: 960px) {
-    .item{
-        height: 45vh;
-        width: 45vh;
-    }
-
-    .data{
-        font-size: 1.2em;
-        margin-top: 1em;
-    }
-}
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -34,13 +10,10 @@
     list-style: none;
     font-weight: 400;
 
-    border: solid red 0px;
+    outline: solid red 0px;
 }
 
-body{
-    margin: 0 auto;
-    background-color: rgba(194, 194, 194, 0.8);
-}
+/* LAYOUT */
 
 header{
     position: fixed;
@@ -50,98 +23,7 @@ header{
     z-index: 2;
 }
 
-#main{
-    padding: 0 80px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly; */
-}
-
-@media screen and (max-width: 1350px) {
-    #main{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 790px) {
-    #main{
-        padding: 0 20px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    footer{
-        font-size: 9px !important;
-    }
-}
-    
-
-/* .data{
-    color: white;
-    text-align: center;
-} */
-
-h3{
-    font-size: 1.5em !important;
-    color: white !important;
-    text-align: center;
-}
-
-.card-base-text{
-    color: white;
-    font-weight: 200;
-    font-size: .8em;
-}
-
-.data{
-    color: white;
-}
-
-.item{
-    justify-self: center;
-    background-color: black;
-    margin: 30px;
-    filter: drop-shadow(2px 2px 5px #ccc);
-    border: solid 15px white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: 150ms;
-    font-family: 'Roboto Mono', monospace;
-}
-
-.img{
-    max-width: 100%;
-}
-
-.item:hover img{
-    filter: blur(4px) invert(25%);
-}
-
-.item:hover{
-    transform: scale(1.1);
-    transition: ease-in-out;
-    transition-duration: 150ms;
-    
-}
-
-.item .hide{
-    visibility: hidden;
-}
-
-.item:hover .hide{
-    visibility: visible;
-    transition: ease-in-out;
-    transition-duration: 150ms;
-    
-}
-
-.divP{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-}
+/* FOOTER */
 
 footer{
     height: 50px;
@@ -179,71 +61,17 @@ footer p{
     margin-bottom: 4px;
 }
 
-/* form{
-    padding: 40px;
-    width: 25em;
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    background-color: black;
-    box-shadow: 0px 0px 20px gray;
-} */
-
-/* form input{
-    height: 30px;
-    width: 100%;
+body{
+    margin: 0 auto;
+    background-color: rgba(194, 194, 194, 0.8);
 }
 
-form select{
-    width: 100%;
-} */
-
-/* .form{
-    display: flex;
-    justify-content: center;
-    margin-top: 4em;
-} */
-
-/* #submit{
-    width: 100%;
-} */
-
-#recherche{
-    text-align: center;
-    -webkit-animation: colorchange 7s infinite;
-    margin-top: 30px;
+#main{
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-@-webkit-keyframes colorchange {
-    0% {
-        color: black;
-    }
-    14% {
-        color: #D12229;
-    }
-    28% {
-        color: #F68A1E;
-    }
-    42% {
-        color: #FDE01A;
-    }
-    56% {
-        color: #007940;
-    }
-    70% {
-        color: #24408E;
-    }
-    84% {
-        color: #732982;
-    }
-}
-
-#nochamps{
-    margin-top: 10px;
-    text-align: center;
-    font-size: 30px;
-    color: darkred;
-}
 .enbas{
     height: 150px;
 }
@@ -252,17 +80,7 @@ form select{
     height: 70px;
 }
 
-#background{
-    display: flex;
-    justify-content: center;
-}
-
-#background img{
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-
-}
+/* HOME */
 
 #catalogue{
     position: fixed;
@@ -289,6 +107,86 @@ form select{
     transform: scale(1.05);
 }
 
+#background{
+    display: flex;
+    justify-content: center;
+}
+
+#background img{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+/* CARD */
+
+.item{
+    justify-self: center;
+    background-color: black;
+    margin: 30px;
+    filter: drop-shadow(2px 2px 5px #ccc);
+    border: solid 15px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 150ms;
+    font-family: 'Roboto Mono', monospace;
+    height: 35vh;
+    width: 35vh;
+}
+
+.img{
+    max-width: 100%;
+}
+
+.item:hover img{
+    filter: blur(4px) invert(25%);
+}
+
+.item:hover{
+    transform: scale(1.1);
+    transition: ease-in-out;
+    transition-duration: 150ms;
+    
+}
+
+.item .hide{
+    visibility: hidden;
+}
+
+.item:hover .hide{
+    visibility: visible;
+    transition: ease-in-out;
+    transition-duration: 150ms;
+    
+}
+
+.divP{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+h3{
+    font-size: 1.1em !important;
+    color: white !important;
+    text-align: center;
+}
+
+.card-base-text{
+    color: white;
+    font-weight: 200;
+    font-size: .8em;
+}
+
+.data{
+    color: white;
+    font-size: .8em;
+}
+
+/* RECHERCHE */
+
 #searchButton{
     position: relative;
 }
@@ -304,7 +202,6 @@ form select{
 
 #collapseSearch form{
     display: flex;
-
 }
 
 #collapseSearch input{
@@ -315,6 +212,7 @@ form select{
     background-color: white;
     border-radius: 5px;
     margin: 15px 15px;
+    border: none;
 }
 
 #collapseSearch input:focus{
@@ -325,7 +223,7 @@ form select{
 #collapseSearch select{
     border: none;
     border-radius: 5px;
-    width: 100px;
+    width: 150px;
     height: 30px;
     margin: 15px 15px;
     padding: 0 10px;
@@ -341,8 +239,56 @@ form select{
     background-color: transparent;
     width: 25px !important;
     margin-right: 15px;
+    border: none;
 }
 
 #submit:hover{
     color: white;
+}
+
+#nochamps{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: darkred;
+}
+
+@media screen and (max-width: 1350px) {
+    #main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 790px) {
+    #main{
+        padding: 0 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer{
+        font-size: 9px !important;
+    }
+    #collapseSearch form{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .item{
+        height: 45vh;
+        width: 45vh;
+    }
+
+    .data{
+        font-size: 1.2em;
+        margin-top: 1em;
+    }
+
+    h3{
+        font-size: 1.5em !important;
+    }
+
+    .divP{
+        width: 300px;
+        height: 300px;
+    }
 }

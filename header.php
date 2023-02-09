@@ -19,7 +19,8 @@
                         <div class="collapse" id="collapseSearch"> 
                         <form method="GET" action="reponse_recherche.php" data-parsley-validate>
                             <input type="text" name="album" id="" placeholder="Album">
-                            <select class="formInput" name="artist">
+                            <div>
+                                <select class="formInput" name="artist">
                                 <option value="">All</option>
                                 <?php
                                 $mabd = connexion();
@@ -32,6 +33,8 @@
                                 ?>
                             </select>
                             <button type="submit" class="bi bi-search" id="submit"></button>
+                            </div>
+                            
                         </form>
                         </div>
                     </li>
