@@ -204,6 +204,10 @@ h3{
     display: flex;
 }
 
+#collapseSearch form div{
+    display: flex;
+}
+
 #collapseSearch input{
     background-color: black;
     padding: 10px;
