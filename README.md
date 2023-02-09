@@ -1,1 +1,1 @@
-Ce site web a été réalisé lors de mon second semestre en BUT MMI (mars 2022)
+This website was made during my second semester in Bachelor of Technology.
