@@ -13,7 +13,7 @@ echo '<div class="enhaut"></div>';
 
 
     if (empty($artist) AND (empty($album) == true)){
-        echo '<p id="nochamps">Aucun champs renseignés</p>';
+        echo '<p id="nochamps">No field filled</p>';
         $req = "SELECT * FROM albums INNER JOIN artists ON albums.id_artist = artists.id_artist;";
     }
 

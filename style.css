@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
 @media screen and (min-width: 200px) {
     .item{
@@ -76,9 +77,25 @@ header{
 }
     
 
-.data{
+/* .data{
     color: white;
     text-align: center;
+} */
+
+h3{
+    font-size: 1.5em !important;
+    color: white !important;
+    text-align: center;
+}
+
+.card-base-text{
+    color: white;
+    font-weight: 200;
+    font-size: .8em;
+}
+
+.data{
+    color: white;
 }
 
 .item{
@@ -91,6 +108,7 @@ header{
     align-items: center;
     justify-content: center;
     transition-duration: 150ms;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .img{
@@ -307,7 +325,7 @@ form select{
 #collapseSearch select{
     border: none;
     border-radius: 5px;
-    width: 200px;
+    width: 100px;
     height: 30px;
     margin: 15px 15px;
     padding: 0 10px;

@@ -9,18 +9,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
+                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="listing.php">Liste</a>
+                        <a class="nav-link" href="listing.php">List</a>
                     </li>
                     <li class="nav-item" id="searchButton">
-                        <a data-bs-toggle="collapse" href="#collapseSearch" class="nav-link" href="">Rechercher</a>
+                        <a data-bs-toggle="collapse" href="#collapseSearch" class="nav-link" href="">Research</a>
                         <div class="collapse" id="collapseSearch"> 
                         <form method="GET" action="reponse_recherche.php" data-parsley-validate>
-                            <input type="text" name="album" id="" placeholder="Recherche">
+                            <input type="text" name="album" id="" placeholder="Album">
                             <select class="formInput" name="artist">
-                                <option value="">Tous les artistes</option>
+                                <option value="">All</option>
                                 <?php
                                 $mabd = connexion();
                                 $req = "SELECT nom_artist FROM artists";

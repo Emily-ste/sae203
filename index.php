@@ -5,7 +5,7 @@
 
 <main id="background">
     <img src="img/bg.webp" alt="">
-    <div id="catalogue"><button><a href="listing.php">Catalogue</a></button></div>
+    <div id="catalogue"><button><a href="listing.php">Catalog</a></button></div>
 </main>
 
 <?php

@@ -1,11 +1,11 @@
 <footer>
     <ul>
-        <li><a href="#">À&nbsppropos</a></li>
+        <li><a href="#">About</a></li>
         <li><a href="#">Support</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="admin/admin.php">Login</a></li>
         <li><a href="#">Instagram</a></li>
-        <li><a href="#">mentions&nbsplégales</a></li>
+        <li><a href="#">Terms</a></li>
     </ul>
-    <p>© 2022-2023 Wrapped — Tous droits réservés</p>
+    <p>© 2021-2023 Wrapped — All rights reserved</p>
 </footer>

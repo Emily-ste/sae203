@@ -233,15 +233,16 @@ function showList($resultat){
         echo '<div class="item">';
         echo '<img class="img" src="img/cover/'.str_replace(' ', '',$value['titre_album'].'.jpeg'.'" alt="'.$value['titre_album']).'">';
         echo '<div class="divP">';
+        echo '<h3 class="hide">'.ucwords(strtolower($value['titre_album'])).'</h3>';
         echo '<p class="hide data">';
-        echo ucwords(strtolower($value['titre_album'])).'<br>'.
-            'Par : '.ucwords(strtolower($value['nom_artist'])).'<br>'.
-            'Pays : '.ucwords(strtolower($value['natio_artist'])).'<br>'.
-            'Actif depuis : '.ucwords(strtolower($value['since_artist'])).'<br>'.
-            'Sortie : '.ucwords(strtolower($value['release_album'])).'<br>'.
-            ucwords(strtolower($value['lenght_album'])).' Minutes'.'<br>'.
-            'Genre : '.ucwords(strtolower($value['style_album'])).'<br>'.
-            ucwords(strtolower($value['nombretrack_album'])).' Pistes'."\n";
+        echo 
+            '<span class="card-base-text">By: </span>'.ucwords(strtolower($value['nom_artist'])).'<br>'.
+            '<span class="card-base-text">From: </span>'.ucwords(strtolower($value['natio_artist'])).'<br>'.
+            '<span class="card-base-text">Since: </span>'.ucwords(strtolower($value['since_artist'])).'<br>'.
+            '<span class="card-base-text">Release: </span>'.ucwords(strtolower($value['release_album'])).'<br>'.
+            '<span class="card-base-text">Genre: </span>'.ucwords(strtolower($value['style_album'])).'<br>'.
+            ucwords(strtolower($value['lenght_album'])).' <span class="card-base-text">Minutes</span><br>'.
+            ucwords(strtolower($value['nombretrack_album'])).' <span class="card-base-text">Tracks</span>'."\n";
         echo '</p>';
         echo '</div>';
         echo '</div>';
